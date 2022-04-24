@@ -1,0 +1,233 @@
+*{
+padding: 0;
+margin: 0;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body{
+   background-image: url('../images/tiletint1.png');
+   background-attachment: fixed;
+   
+   
+
+   min-height: 500px;
+}.dark-mode{
+  background-image: url('../images/tiletint2.png');
+  background-attachment: fixed;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+/* agrega un bordeado al svg de la imagen del logotipo y le da una estatura     */
+.navbarlogo{
+   
+    padding: 0%;    
+    margin: 0%;
+    height: 50px;
+    filter: drop-shadow(2px 0 0 antiquewhite) drop-shadow(-2px 0 0 antiquewhite) drop-shadow(0 2px 0 antiquewhite) drop-shadow(0 -2px 0 antiquewhite) drop-shadow(1px 0 0 rgb(255, 255, 255)) drop-shadow(-1px 0 0 rgb(255, 255, 255)) drop-shadow(0 -1px 0 rgb(255, 255, 255)) drop-shadow(0 1px 0 rgb(255, 255, 255));
+}
+
+/*la sig clase aun no se usa, pero esta aqui por si se necesita darle un bordeado blanco a un svg*/
+.logosvgoutline{
+    filter: drop-shadow(2px 0 0 antiquewhite) drop-shadow(-2px 0 0 antiquewhite) drop-shadow(0 2px 0 antiquewhite) drop-shadow(0 -2px 0 antiquewhite) drop-shadow(1px 0 0 rgb(255, 255, 255)) drop-shadow(-1px 0 0 rgb(255, 255, 255)) drop-shadow(0 -1px 0 rgb(255, 255, 255)) drop-shadow(0 1px 0 rgb(255, 255, 255));
+}
+/*esta clase le cambia el color al icono hamburgesa de bootstrap a amarillo y apartir de dropshadow le da un bordeado tambien*/
+.svgfilter1{
+  filter: invert(87%) sepia(59%) saturate(2140%) hue-rotate(356deg) brightness(106%) contrast(105%)  drop-shadow(1px 0 0 rgb(61, 60, 60)) drop-shadow(-1px 0 0 rgb(61, 60, 60)) drop-shadow(0 1px 0 rgb(61, 60, 60)) drop-shadow(0 -1px 0 rgb(61, 60, 60)) drop-shadow(1px 0 0 rgb(61, 60, 60)) drop-shadow(-1px 0 0 rgb(61, 60, 60)) drop-shadow(0 -1px 0 rgb(61, 60, 60)) drop-shadow(0 1px 0 rgb(61, 60, 60));
+}
+
+
+
+
+@font-face {
+    font-family: 'Juniper-Normal'; /*a name to be used later*/
+    src: url('assets/fonts/Juniper-Normal'); /*URL to font*/
+}
+/*la sig clase aun no se usa pero esta aqui por si se necesita usar la tipografia del logotipo en el texto ademas de que viene bordeado */
+.customfont{
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: .3em;
+    color: #C45E31 !important;
+    font-family: 'Juniper-Normal';
+    text-shadow: 2px 0 0 #FAEBD7, -2px 0 0 #FAEBD7, 0 2px 0 #FAEBD7, 0 -2px 0 #FAEBD7, 1px 1px #FAEBD7, -1px -1px 0 #FAEBD7, 1px -1px 0 #FAEBD7, -1px 1px 0 #FAEBD7;
+}
+/*la sig clase esta en desuso pero es por si se necesita usar la tipografia del logo viene bordeado*/
+.customfontsimple{
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 0 0 #FAEBD7, -2px 0 0 #FAEBD7, 0 2px 0 #FAEBD7, 0 -2px 0 #FAEBD7, 1px 1px #FAEBD7, -1px -1px 0 #FAEBD7, 1px -1px 0 #FAEBD7, -1px 1px 0 #FAEBD7;
+
+}
+/*la sig clase y su hover son para cambiar los estilos de los botones de bootstrap checar la etiqueta html del boton de navbar porque tmbn tiene estilos que acomodan el texto*/
+.custombtn{
+  color:#ffffff !important; background-color: rgba(30, 127, 207, 0);  
+                backdrop-filter: blur(5px) ;  padding: 5px !important; border-radius: 10px
+}
+.custombtn:hover{
+  background-color: rgba(43, 149, 175, 0.486) !important;  
+                backdrop-filter: blur(5px) !important ; padding: 5px;
+}
+/* button scroll*/
+.custombtnalt{
+  color:#000000 !important; background-color: rgba(16, 108, 151, 0.603);  
+  backdrop-filter: blur(5px) ;  padding: 5px !important; border-radius: 10px
+}
+.custombtnalt:hover{
+  color:#000000 !important; background-color: rgba(0, 156, 228, 0.733);  
+  backdrop-filter: blur(5px) ;  padding: 5px !important; border-radius: 10px
+}
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+  }
+  
+  .scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #FFF;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+  }
+  
+  .scroll-down:before {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 6px);
+      transform: rotate(-45deg);
+      display: block;
+      width: 12px;
+      height: 12px;
+      content: "";
+      border: 2px solid white;
+      border-width: 0px 0 2px 2px;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
+/* button scroll*/
+
+.segundaseccion{
+  width: 100%;
+  height: 100vh;
+
+padding-top: 80px;
+}
+.elementoizq{
+  width: 40%;
+  height: 120px;
+  background-color: rgb(172, 103, 103);
+
+ margin-top: 120px;
+ margin-left: 5%;
+ 
+}
+.elementoizqsmall{
+  width: 20%;
+  height: 120px;
+  background-color: rgb(172, 103, 103);
+ 
+ margin-left:5%;
+}
+.elementoder{
+  width: 40%;
+  height: 120px;
+  background-color: rgb(172, 103, 103);
+ 
+
+ margin-left: 30%;
+}
+.elementodersmall{
+  width: 20%;
+  height: 120px;
+  background-color: rgb(172, 103, 103);
+  margin-top: 120px;
+  margin-left: 30%;
+}
+.elementcontainer{
+display: flex;
+flex-direction: row;
+  
+}
+
+/*txtfx*/
+/* Cool font from Google Fonts! */
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+
+body {
+	margin: 0px;
+}
+
+#container {
+	/* Center the text in the viewport. */
+	position: absolute;
+	margin: auto;
+	width: 100vw;
+	height: 80pt;
+	top: 0;
+ 
+	bottom: 0;
+right: 0px;
+	/* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+	filter: url(#threshold) blur(0.9px);
+}
+
+/* Your average text styling */
+#text1, #text2 {
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	
+	font-family: 'Raleway', sans-serif;
+	font-size: 80pt;
+	color: #FAEBD7;
+	text-align: center;
+	
+	user-select: none;
+}
+
+@media (max-width :900px){
+.txtnone{
+  display: none;
+}
+}
+/*txtfx*/
+footer{
+  width: 100%;
+  height: 140px;
+  background-color: #1f1319;
+}
